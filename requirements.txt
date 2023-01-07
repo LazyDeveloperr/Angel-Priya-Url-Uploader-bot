@@ -1,0 +1,17 @@
+aiohttp
+beautifulsoup4
+hachoir
+numpy
+Pillow
+pyrogram==1.3.6
+requests
+tgcrypto
+yt-dlp
+olefile
+lk21
+filetype
+tldextract
+Flask==2.2.2
+gunicorn==20.1.0
+pymongo[srv]==3.12.3
+
