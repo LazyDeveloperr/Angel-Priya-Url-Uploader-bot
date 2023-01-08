@@ -72,7 +72,7 @@ async def start(bot, update):
                     [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
                 ]
             )
-        await bot.reply_photo(
+        await bot.send_photo(
             Photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
             chat_id=update.chat.id,
             text=Translation.LAZY_DEVELOPER_TEXT.format(update.from_user.first_name),
@@ -90,7 +90,7 @@ async def start(bot, update):
                 ]
             )
         # logger.info(update) ==         
-        await bot.reply_photo(
+        await bot.send_photo(
             Photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
             chat_id=update.chat.id,
             text=Translation.LAZY_START_TEXT.format(update.from_user.first_name),
