@@ -73,7 +73,7 @@ async def start(bot, update):
                 ]
             )
         await bot.send_photo(
-            Photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
+            photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
             chat_id=update.chat.id,
             text=Translation.LAZY_DEVELOPER_TEXT.format(update.from_user.first_name),
             reply_markup=lazy_buttons,
@@ -91,7 +91,7 @@ async def start(bot, update):
             )
         # logger.info(update) ==         
         await bot.send_photo(
-            Photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
+            photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
             chat_id=update.chat.id,
             text=Translation.LAZY_START_TEXT.format(update.from_user.first_name),
             reply_markup=lazy_buttons,
