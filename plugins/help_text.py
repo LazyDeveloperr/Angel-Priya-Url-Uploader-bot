@@ -41,7 +41,26 @@ async def help_user(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 async def start(bot, update):
-    if update.from_user.id in Config.AUTH_USERS:
+    if update.from_user.id in (Config.AUTH_USERS & Config.LAZY_DEVELOPER):
+        # logger.info(update)
+        await bot.send_message(
+            photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
+            chat_id=update.chat.id,
+            text=Translation.LAZY_DEVELOPER_TEXT.format(update.from_user.first_name),
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("⚡️𝔖𝔲𝔭𝔭𝔬𝔯𝔱", url="https://t.me/LazyPrincessSupport"),
+                        InlineKeyboardButton("✪ ＹＴ ✪", url="https://youtube.com/@LazyDeveloperr"),
+                        InlineKeyboardButton("⚡️ U𝖕𝖉𝖆𝖙e", url="https://t.me/LazyDeveloper"),
+                    ],
+                    [InlineKeyboardButton("⭑💢 𝚂 𝙾 𝙲 𝚒 𝙰 𝙻 💢⭑", url="https://instagram.com/LazyDeveloper__")],
+                    [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
+                ]
+            ),
+            reply_to_message_id=update.message_id
+        )
+    elif update.from_user.id in Config.AUTH_USERS:
         # logger.info(update)
         await bot.send_message(
             chat_id=update.chat.id,
@@ -59,28 +78,13 @@ async def start(bot, update):
             ),
             reply_to_message_id=update.message_id
         )
-    elif update.from_user.id in Config.LAZY_DEVELOPER:
-        # logger.info(update)
-        lazy_buttons = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("⚡️𝔖𝔲𝔭𝔭𝔬𝔯𝔱", url="https://t.me/LazyPrincessSupport"),
-                        InlineKeyboardButton("✪ ＹＴ ✪", url="https://youtube.com/@LazyDeveloperr"),
-                        InlineKeyboardButton("⚡️ U𝖕𝖉𝖆𝖙e", url="https://t.me/LazyDeveloper"),
-                    ],
-                    [InlineKeyboardButton("⭑💢 𝚂 𝙾 𝙲 𝚒 𝙰 𝙻 💢⭑", url="https://instagram.com/LazyDeveloper__")],
-                    [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
-                ]
-            )
-        await bot.send_photo(
+    else:
+        # logger.info(update) ==         
+        await bot.send_message(
             photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
             chat_id=update.chat.id,
-            text=Translation.LAZY_DEVELOPER_TEXT.format(update.from_user.first_name),
-            reply_markup=lazy_buttons,
-            reply_to_message_id=update.message_id
-        )
-    else:
-        lazy_buttons = InlineKeyboardMarkup(
+            text=Translation.LAZY_START_TEXT.format(update.from_user.first_name),
+            reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
                     [
@@ -88,13 +92,7 @@ async def start(bot, update):
                     ],
                     [InlineKeyboardButton("⭑💢 𝚂 𝙾 𝙲 𝚒 𝙰 𝙻 💢⭑", url="https://instagram.com/LazyDeveloper__")],
                 ]
-            )
-        # logger.info(update) ==         
-        await bot.send_photo(
-            photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
-            chat_id=update.chat.id,
-            text=Translation.LAZY_START_TEXT.format(update.from_user.first_name),
-            reply_markup=lazy_buttons,
+            ),
             reply_to_message_id=update.message_id
         )
          
