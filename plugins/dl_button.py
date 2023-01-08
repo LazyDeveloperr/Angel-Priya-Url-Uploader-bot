@@ -283,7 +283,7 @@ async def download_coroutine(bot, session, url, file_name, chat_id, message_id, 
             chat_id,
             message_id,
             text="""Preparing your request...
-⚡️ 𝗨𝗥𝗟: <a href='{}'>Lazy Url</a>
+⚡️ 𝗨𝗥𝗟: <a href='{}'>❝ 𝐋𝐚𝐳𝐲 𝐔𝐫𝐥 ❞</a>
 🎲 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲: {}""".format(url, humanbytes(total_length))
         )
         with open(file_name, "wb") as f_handle:
@@ -303,7 +303,7 @@ async def download_coroutine(bot, session, url, file_name, chat_id, message_id, 
                         (total_length - downloaded) / speed) * 1000
                     estimated_total_time = elapsed_time + time_to_completion
                     try:
-                        current_message = """\n\n**  ⭑┗━━┫⦀⦙ Download Status ⦙⦀┣━━┛⭑**
+                        current_message = """\n\n** ⭑┗━┫⦀⦙ Download Status ⦙⦀┣━┛⭑**
 ⚡️ 𝗨𝗥𝗟: <a href='{}'>❝ 𝐋𝐚𝐳𝐲 𝐔𝐫𝐥 ❞</a>
 🎲 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲: {}
 ⏳ 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱: {}

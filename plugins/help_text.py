@@ -60,7 +60,8 @@ async def start(bot, update):
             reply_to_message_id=update.message_id
         )
     else:
-        await bot.send_message(
+        await bot.reply_photo(
+            Photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
             chat_id=update.chat.id,
             text=Translation.LAZY_START_TEXT.format(update.from_user.first_name),
             reply_markup=InlineKeyboardMarkup(
