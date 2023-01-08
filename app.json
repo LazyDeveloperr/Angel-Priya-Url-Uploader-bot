@@ -50,6 +50,11 @@
       "description": "proxy for accessing youtube-dl in GeoRestricted Areas. Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061",
       "value": "",
       "required": false
+    },
+    "LAZY_DEVELOPER": {
+      "description": "Give ADMIN id in this field ",
+      "value": "",
+      "required": true
     }
   },
   "addons": [

@@ -28,3 +28,5 @@ class Config(object):
     PROCESS_MAX_TIMEOUT = 3600
     # watermark file
     DEF_WATER_MARK_FILE = ""
+    #Admin id is stored in 
+    LAZY_DEVELOPER = set(int(x) for x in os.environ.get("LAZY_ADMIN", "").split())

@@ -41,3 +41,9 @@ The 𝐋𝐚𝐳𝐲𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫𝐫 has not allowed me 
 
 Please contact my Developer to be an authorised user ! 
 """
+    LAZY_DEVELOPER_TEXT = """▍║▍▏║ Hello Dear ADMIN ║▍▏║▍
+⭑┗━┫⦀⦙ {} ⦙⦀┣━┛⭑
+
+ - Tell me what should i do for you.
+ - or Just send me any url baby
+"""
