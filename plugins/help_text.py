@@ -49,13 +49,29 @@ async def start(bot, update):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            "Source", url="https://github.com/LazyDeveloper"
-                        ),
-                        InlineKeyboardButton("Project Channel", url="https://t.me/LazyDeveloperr"),
+                        InlineKeyboardButton("⚡️𝔖𝔲𝔭𝔭𝔬𝔯𝔱", url="https://t.me/LazyPrincessSupport"),
+                        InlineKeyboardButton("✪ ＹＴ ✪", url="https://youtube.com/@LazyDeveloperr"),
+                        InlineKeyboardButton("⚡️ U𝖕𝖉𝖆𝖙e", url="https://t.me/LazyDeveloper"),
                     ],
-                    [InlineKeyboardButton("Author", url="https://t.me/mRiderDM")],
+                    [InlineKeyboardButton("⭑💢 𝚂 𝙾 𝙲 𝚒 𝙰 𝙻 💢⭑", url="https://instagram.com/@LazyDeveloper__")],
+                    [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
                 ]
             ),
             reply_to_message_id=update.message_id
         )
+    else:
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.LAZY_START_TEXT.format(update.from_user.first_name),
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
+                    [
+                        InlineKeyboardButton("▍║▍▏║ UPDATE ║▍▏║▍", url="https://t.me/LazyPrincessSupport"),
+                    ],
+                    [InlineKeyboardButton("⭑💢 𝚂 𝙾 𝙲 𝚒 𝙰 𝙻 💢⭑", url="https://instagram.com/@LazyDeveloper__")],
+                ]
+            ),
+            reply_to_message_id=update.message_id
+        )
+         

@@ -1,4 +1,4 @@
-#Thank you LazyDeveloper for helping me in this journey !
+#Thank you LazyDeveloper for helping developers in this journey !
 #Must Subscribe On YouTube @LazyDeveloperr 
 
 from flask import Flask

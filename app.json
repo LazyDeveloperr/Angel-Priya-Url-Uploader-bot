@@ -2,18 +2,17 @@
   "name": "X-URL-Uploader",
   "description": "Telegram Bot to Upload URLs to Telegram as File and Video.",
   "keywords": [
-    "telegram",
-    "best",
-    "youtube",
+    "LazyDeveloper",
+    "LazyPrincess",
+    "url-uploader-src",
     "downloader",
     "open",
     "source",
     "multi",
     "purpose",
     "ffmpeg",
-    "remote",
-    "uploader"
-  ],
+    "remote"
+    ],
   "success_url": "https://t.me/LazyDeveloper",
   "website": "https://github.com/LazyDeveloperr",
   "repository": "https://github.com/LazyDeveloperr/test100",
