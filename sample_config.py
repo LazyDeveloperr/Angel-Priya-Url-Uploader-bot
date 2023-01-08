@@ -22,11 +22,16 @@ class Config(object):
     # proxy for accessing youtube-dl in GeoRestricted Areas
     # Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061
     HTTP_PROXY = os.environ.get("HTTP_PROXY", "")
+    # LOGGER INFO CHANNEL ID
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -100))
+    # Give Admin id in this field 
+    LAZY_DEVELOPER = set(int(x) for x in os.environ.get("LAZY_ADMIN", "").split())
     # maximum message length in Telegram
     MAX_MESSAGE_LENGTH = 40960
     # set timeout for subprocess
     PROCESS_MAX_TIMEOUT = 3600
     # watermark file
     DEF_WATER_MARK_FILE = ""
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -100))
+
+
     
