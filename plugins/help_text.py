@@ -43,11 +43,9 @@ async def help_user(bot, update):
 async def start(bot, update):
     if update.from_user.id in (Config.AUTH_USERS & Config.LAZY_DEVELOPER):
         # logger.info(update)
-        Text = Translation.LAZY_DEVELOPER_TEXT.format(update.from_user.first_name)
-        await bot.send_photo(
-            photo = "https://telegra.ph/file/1efd13f55ef33d64aa2c8.jpg", 
+        await bot.send_message(
             chat_id=update.chat.id,
-            text=Text,
+            text=Translation.LAZY_DEVELOPER_TEXT.format(update.from_user.first_name),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
