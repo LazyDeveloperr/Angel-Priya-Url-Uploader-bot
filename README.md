@@ -1,7 +1,7 @@
-<img src="https://telegra.ph/file/59530b4e467baea6240eb.png" alt="logo" target="/blank">
+<img src="https://telegra.ph/file/efdf5689646da738eb787.jpg" alt="logo" target="/blank">
 
 <h1 align="center">
- <b><a href="https://telegram.me/LazyDeveloper" target="/blank">MissPerfect-URL-BOT</a></>
+ <b><a href="https://telegram.me/LazyDeveloper" target="/blank">BEWAFA Angel-Priya BOT</a></>
 </h1>
 
 <p align="center">🤍 Thanks for Being Here 🤍</p>
