@@ -70,8 +70,11 @@
 👉 Upload [yt-dlp Supported Links](https://ytdl-org.github.io/youtube-dl/supportedsites.html) to Telegram.
 
 🧡 Upload HTTP/HTTPS as File/Video to Telegram.
+
 🧡 Upload zee5, sony.live, voot and much more.
+
 🧡 Permanent thumbnail Support.
+
 🧡 Broadcast message.
 
 ## Credits, and Thanks to
