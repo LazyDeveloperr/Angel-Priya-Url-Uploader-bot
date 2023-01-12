@@ -32,7 +32,9 @@
 
 * `WEBHOOK` - Give value `LazyDev`.
 
-* `DEF_THUMB_NAIL_VID_S` - default thumbnail to be used in the videos. Incase, youtube-dl is unable to find a thumbnail 
+* `DEF_THUMB_NAIL_VID_S` - default thumbnail to be used in the videos. Incase, youtube-dl is unable to find a thumbnail.
+
+* `LOG_CHANNEL` - To keep an eye on the users. If they do upload something illegal.
 
   ### 📶 DEPLOYEMENT SUPPORT
 
