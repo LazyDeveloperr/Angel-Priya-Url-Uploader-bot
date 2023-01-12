@@ -7,7 +7,7 @@
 <p align="center">🤍 Thanks for Being Here 🤍</p>
 
 
-## MIND IT....
+## * MiND iT....
 👉 Only Auth Users (AUTH_USERS) Can Use The Bot
 
 👉 Upload [YTDL Supported Links](https://ytdl-org.github.io/youtube-dl/supportedsites.html) to Telegram.
