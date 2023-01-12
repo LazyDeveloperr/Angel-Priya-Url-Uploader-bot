@@ -39,7 +39,7 @@
 <details><summary>🔥 Deploy To Koyeb 🔥</summary>
 <p>
 <br>                 
-<a target="/blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/LazyDeveloperr/Angel-Priya-Url-Uploader-bot&branch=main&name=LazyMissPerfectGOT" >
+<a target="/blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/LazyDeveloperr/Angel-Priya-Url-Uploader-bot&branch=master&name=LazyMissPerfectGOT" >
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="Deploy">
 </a>
 </p>
