@@ -25,16 +25,14 @@
 
 * `API_HASH` - From my.telegram.org 
 
-* `OWNER_ID` - Your Telegram ID | You can multiple ids seperating by space.
-
-* `DATABASE_URL`  - Mongo Database URL from https://cloud.mongodb.com/
-
 * `AUTH_USERS`  - Your Telegram + Your your paid users id.
   - NOTE - Only `AUTH_USERS` can use this BOT. SO you must have to give your id.
 
 * `LAZY_DEVELOPER` - Give ADMIN id in this field.
 
 * `WEBHOOK` - Give value `LazyDev`.
+
+* `DEF_THUMB_NAIL_VID_S` - default thumbnail to be used in the videos. Incase, youtube-dl is unable to find a thumbnail 
 
   ### 📶 DEPLOYEMENT SUPPORT
 
