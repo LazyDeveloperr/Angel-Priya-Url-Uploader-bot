@@ -25,12 +25,12 @@ from helper_funcs.help_uploadbot import DownLoadFile
 from helper_funcs.display_progress import progress_for_pyrogram
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import UserNotParticipant
-
+from pyrogram import Client
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
-async def echo(bot, update):
+async def echo(bot: Client, update: Message):
     if update.from_user.id in Config.AUTH_USERS:
         logger.info(update.from_user)
         url = update.text
@@ -82,7 +82,7 @@ async def echo(bot, update):
                     video=dldir,
                     caption=file_name,
                     duration=duration,
-                    reply_to_message_id=update.message.id,
+                    reply_to_message_id=update.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -96,7 +96,7 @@ async def echo(bot, update):
                     audio=dldir,
                     caption=file_name,
                     duration=duration,
-                    reply_to_message_id=update.message.id,
+                    reply_to_message_id=update.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -109,7 +109,7 @@ async def echo(bot, update):
                     chat_id=update.chat.id,
                     document=dldir,
                     caption=file_name,
-                    reply_to_message_id=update.message.id,
+                    reply_to_message_id=update.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -202,7 +202,7 @@ async def echo(bot, update):
             await bot.send_message(
                 chat_id=update.chat.id,
                 text=Translation.NO_VOID_FORMAT_FOUND.format(str(error_message)),
-                reply_to_message_id=update.message.id,
+                reply_to_message_id=update.id,
                 parse_mode="html",
                 disable_web_page_preview=True
             )
@@ -334,7 +334,7 @@ async def echo(bot, update):
                 Config.CHUNK_SIZE,
                 None,  # bot,
                 Translation.DOWNLOAD_START,
-                update.message.id,
+                update.id,
                 update.chat.id
             )
             if os.path.exists(thumb_image_path):
@@ -347,7 +347,7 @@ async def echo(bot, update):
                 text=Translation.FORMAT_SELECTION.format(thumbnail) + "\n" + Translation.SET_CUSTOM_USERNAME_PASSWORD,
                 reply_markup=reply_markup,
                 parse_mode="html",
-                reply_to_message_id=update.message.id
+                reply_to_message_id=update.id
             )
         else:
             # fallback for nonnumeric port a.k.a seedbox.io
@@ -372,5 +372,5 @@ async def echo(bot, update):
                 text=Translation.FORMAT_SELECTION.format(""),
                 reply_markup=reply_markup,
                 parse_mode="html",
-                reply_to_message_id=update.message.id
+                reply_to_message_id=update.id
             )
